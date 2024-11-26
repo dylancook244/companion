@@ -1,6 +1,11 @@
 <script lang="ts">
+	// import external files
+	import Header from './Components/Header.svelte';
+
+
+
     let messages = [
-        { sender: "AI", content: "Hello! How can I assist you today?" }
+        { sender: "AI", content: "Hello! Type a message in the chat to get started." }
     ];
 
     let newMessage = "";
@@ -32,9 +37,7 @@
 
 <main>
 	<div class="chat-container">
-		<div class="header">
-			<h3>Companion</h3>
-		</div>
+		<Header />
 		<div class="messages">
 			{#each messages as message, i}
 				<div class={`message ${message.sender === "AI" ? "ai" : "user"}`}>
@@ -74,13 +77,6 @@
 		flex-direction: column;
 		height: 100%; /* Fullscreen height */
 		overflow: hidden;
-	}
-
-	.header {
-		background-color: #ff3e00;
-		color: white;
-		text-align: center;
-		font-size: 1.5em; /* Adjusted for readability */
 	}
 
 	.messages {
