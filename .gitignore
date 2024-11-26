@@ -2,3 +2,5 @@
 /public/build/
 
 .DS_Store
+
+/backend/Llama-3.2-1B-Instruct.Q6_K.llamafile
